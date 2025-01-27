@@ -21,9 +21,9 @@ commands:
     exec:
       component: tools
       commandLine: >
-        podman build -t default-route-openshift-image-registry.apps.cluster-znwqn.dynamic.redhatworkshops.io/demo-devspace/my-app:latest . &&
-        podman login -u $(oc whoami) -p $(oc whoami -t) default-route-openshift-image-registry.apps.cluster-znwqn.dynamic.redhatworkshops.io &&
-        podman push default-route-openshift-image-registry.apps.cluster-znwqn.dynamic.redhatworkshops.io/demo-devspace/my-app:latest &&
+        podman build -t default-route-openshift-image-registry.apps.cluster-xzf48.xzf48.sandbox1342.opentlc.com/demo-devspace/my-app:latest . &&
+        podman login -u $(oc whoami) -p $(oc whoami -t) default-route-openshift-image-registry.apps.cluster-xzf48.xzf48.sandbox1342.opentlc.com  &&
+        podman push default-route-openshift-image-registry.apps.cluster-xzf48.xzf48.sandbox1342.opentlc.com/demo-devspace/my-app:latest &&
         oc apply -f deployment.yaml
       workingDir: /projects/my-app
       group:
